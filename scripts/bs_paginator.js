@@ -1,15 +1,11 @@
 /**
  * Bootstrap 3.3 Pagination Helper
  *
- * Syntax:
+ * Recommended Syntax:
  *   <%- bs_paginator({
  *    prev_text: __('previous'),
  *    next_text: __('next')
  *   }) %>
- *
- * Required arguments:
- *   prev_text: i18n helper function for 'previous'
- *   next_text: i18n helper function for 'next'
  *  
 **/
 
