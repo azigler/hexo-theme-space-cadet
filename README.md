@@ -1,8 +1,8 @@
 # hexo-theme-emblem
 
-A simple [Bootstrap](http://getbootstrap.com/) 3.3 blog theme for [Hexo](http://zespia.tw/hexo/).
+A simple [Bootstrap](http://getbootstrap.com/) 4 blog theme for [Hexo](http://zespia.tw/hexo/).
 
-Based on the [hexo-theme-bootstrap-blog](https://github.com/cgmartin/hexo-theme-bootstrap-blog), which is in turn based on the [official Bootstrap 3.3 blog example template](http://getbootstrap.com/examples/blog/).
+Based on the [official Bootstrap 4 blog example template](https://getbootstrap.com/docs/4.0/examples/blog/).
 
 [Demo site](https://www.andrewzigler.com/blog)
 

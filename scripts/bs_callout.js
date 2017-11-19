@@ -1,5 +1,5 @@
 /**
- * Bootstrap 3.3 Callout Helper
+ * Bootstrap Callout Helper
  *
  * Syntax:
  *   {% callout [type] %}

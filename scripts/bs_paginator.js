@@ -1,5 +1,5 @@
 /**
- * Bootstrap 3.3 Pagination Helper
+ * Bootstrap Pagination Helper
  *
  * Recommended Syntax:
  *   <%- bs_paginator({
