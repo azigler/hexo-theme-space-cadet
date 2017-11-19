@@ -19,7 +19,7 @@ function bsPaginatorHelper(options){
   var endSize = options.hasOwnProperty('end_size') ? +options.end_size : 1;
   var midSize = options.hasOwnProperty('mid_size') ? +options.mid_size : 2;
   var space = options.hasOwnProperty('space') ? options.space : '&hellip;';
-  var base = options.base || this.page.base || this.config.root || '';
+  var base = '';
   var format = options.format || this.config.pagination_dir + '/%d/';
   var prevText = options.prev_text || 'Previous';
   var nextText = options.next_text || 'Next';
@@ -36,7 +36,7 @@ function bsPaginatorHelper(options){
     '</span></li>';
 
   function link(i){
-    return self.url_for(i === 1 ? base : base + format.replace('%d', i));
+    return self.url_for(i === 1 ? base : format.replace('%d', i));
   }
 
   function pageLink(i){
