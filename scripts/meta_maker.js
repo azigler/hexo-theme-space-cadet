@@ -21,9 +21,9 @@
  *	twitter_site	Twitter site handle
  *	google_plus		Google+ profile ID
  *	fb_admins		Facebook admin ID
- *	fb_app_id		Facebook ppp ID
+ *	fb_app_id		Facebook app ID
  *	fb_personal_url	URL to personal Facebook page of author
- *  
+ *
 **/
 
 'use strict';
