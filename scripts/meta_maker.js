@@ -7,16 +7,16 @@
  * Recommended Syntax:
  *   <%- meta_maker() %>
  *
- *	Option			Description								Default
+ *	Option			Description					Default
  *
- *	title			Page title								page.title 
- *	title_divider	Divider symbol for title				" | "
- *	type			Page type								website
- *	url				Page URL								page URL
- *	image			Page cover								theme.og_image
- *	site_name		Site name								config.title
- *	description		Page description						First 200 characters
- *	twitter_card	Twitter card type						summary
+ *	title			Page title					page.title 
+ *	title_divider	Divider symbol for title	" | "
+ *	type			Page type					website
+ *	url				Page URL					page URL
+ *	image			Page cover					theme.og_image
+ *	site_name		Site name					config.title
+ *	description		Page description			First 200 characters
+ *	twitter_card	Twitter card type			summary
  *	twitter_creator	Twitter creator handle
  *	twitter_site	Twitter site handle
  *	google_plus		Google+ profile ID
