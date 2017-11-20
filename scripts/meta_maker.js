@@ -13,7 +13,7 @@
  *	title_divider	Divider symbol for title	" | "
  *	type			Page type					website
  *	url				Page URL					page URL
- *	image			Page cover					theme.og_image
+ *	image			Page cover					og-image.jpg
  *	site_name		Site name					config.title
  *	description		Page description			First 200 characters
  *	twitter_card	Twitter card type			summary
@@ -67,7 +67,7 @@ function metaMakerHelper(options) {
   var config = this.config;
   var theme = this.theme;
   var content = page.content;
-  var images = options.image || options.images || page.photos || theme.og_image || [];
+  var images = options.image || options.images || page.photos || theme.og_image || "og-image.jpg";
   var description = options.description || page.description || page.excerpt || content || config.description;
   var keywords = page.keywords || (page.tags && page.tags.length ? page.tags : undefined) || config.keywords;
   var type = options.type || (this.is_post() ? 'article' : 'website');
@@ -165,12 +165,15 @@ function metaMakerHelper(options) {
     return path;
   });
   
+  if (images == "og-image.jpg") {
+	  result += og('og:image', config.url + "/og-image.jpg?<%- date_xml(Date.now()) %>", false);
+  }
   if (images == theme.og_image) {
 	  result += og('og:image', config.url + "/" + theme.og_image, false);
   }
   else {
   	images.forEach(function(path) {
-  	  result += og('og:image', path, false);
+  	  result += og('og:image', path + "?" + moment.now(), false);
   	});
   }
 
@@ -192,7 +195,7 @@ function metaMakerHelper(options) {
   }
 
   if (images.length) {
-    result += meta('twitter:image', images[0], false);
+    result += meta('twitter:image', images[0]+ "?" + moment.now(), false);
   }
 
   if (theme.twitter_creator) {
