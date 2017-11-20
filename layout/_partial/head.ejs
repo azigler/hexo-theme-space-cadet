@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><%
+	  var title = page.title;
+	
+	  if (is_archive()){
+	    title = 'Archives';
+	
+	    if (is_month()){
+	      title += ': ' + page.month + '-' + page.year;
+	    } else if (is_year()){
+	      title += ': ' + page.year;
+	    }
+	  } else if (is_category()){
+	    title = 'Category: ' + page.category;
+	  } else if (is_tag()){
+	    title = 'Tag: ' + page.tag;}
+	%>
+	<%- meta_maker() %>
+	<% if (theme.rss){ %><link rel="alternate" href="<%- url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml"><% } %>
+	<% if (theme.favicon){ %><link rel="icon" href="<%- url_for(theme.favicon) %>?<%- date_xml(Date.now()) %>"><% } %>
+	<% if (config.highlight.enable){ %><link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css"><% } %>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<%- css('css/style.css?'+date_xml(Date.now())) %>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<%- partial('google-analytics') %>
+</head>
