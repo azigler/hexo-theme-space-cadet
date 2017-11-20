@@ -1,6 +1,6 @@
 # hexo-theme-emblem
 
-A simple [Bootstrap](http://getbootstrap.com/) 4 blog theme for [Hexo](http://zespia.tw/hexo/).
+A simple [Bootstrap 4](http://getbootstrap.com/) blog theme for [Hexo](http://zespia.tw/hexo/).
 
 Based on the [official Bootstrap 4 blog example template](https://getbootstrap.com/docs/4.0/examples/blog/).
 

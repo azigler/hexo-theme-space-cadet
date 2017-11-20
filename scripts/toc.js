@@ -1,4 +1,5 @@
 /**
+ *
  * Table of Contents Helper
  *
  * Recommended Syntax:
@@ -8,7 +9,6 @@
  *     headings: 'h1, h2, h3'
  *   }) %>
  *
- *  
 **/
 
 'use strict';

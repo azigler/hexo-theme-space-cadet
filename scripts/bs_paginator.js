@@ -1,4 +1,5 @@
 /**
+ *
  * Bootstrap Pagination Helper
  *
  * Recommended Syntax:
