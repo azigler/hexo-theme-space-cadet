@@ -105,7 +105,6 @@ function metaMakerHelper(options) {
   result += meta('author', config.author, false);
   
   result += "\t" + htmlTag('link', {rel: 'canonical', href: config.url + "/" + page.path}) + '\n';
-  result += "\t" + htmlTag('meta', {itemprop: "url", content: config.url + "/" + page.path}) + '\n';
   if (description) {
     result += meta('description', description, false);
   }
