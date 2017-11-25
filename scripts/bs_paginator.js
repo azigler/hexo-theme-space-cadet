@@ -22,7 +22,7 @@ function bsPaginatorHelper(options){
   var space = options.hasOwnProperty('space') ? options.space : '&hellip;';
   var base = '';
   var format = options.format || this.config.pagination_dir + '/%d/';
-  var prevText = options.prev_text || 'Previous';
+  var prevText = options.prev_text || 'Prev';
   var nextText = options.next_text || 'Next';
   var prevNext = options.hasOwnProperty('prev_next') ? options.prev_next : true;
   var transform = options.transform;
