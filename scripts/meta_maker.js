@@ -67,7 +67,7 @@ function metaMakerHelper(options) {
   var config = this.config;
   var theme = this.theme;
   var content = page.content;
-  var images = options.image || options.images || page.photos || theme.og_image || "og-image.jpg";
+  var images = page.photos || theme.og_image_url;
   var description = options.description || page.description || page.excerpt || content || config.description;
   var keywords = page.keywords || (page.tags && page.tags.length ? page.tags : undefined) || config.keywords;
   var type = options.type || (this.is_post() ? 'article' : 'website');
@@ -101,7 +101,7 @@ function metaMakerHelper(options) {
       if (src) images.push(src);
     });
   }
-  
+
   result += meta('author', config.author, false);
   
   result += "\t" + htmlTag('link', {rel: 'canonical', href: config.url + "/" + page.path}) + '\n';
@@ -164,17 +164,14 @@ function metaMakerHelper(options) {
     return path;
   });
   
-  if (images == "og-image.jpg") {
-	  result += og('og:image', config.url + "/og-image.jpg?<%- date_xml(Date.now()) %>", false);
-  }
-  if (images == theme.og_image) {
-	  result += og('og:image', config.url + "/" + theme.og_image, false);
+  if (images.length) {
+	  images.forEach(function(path) {
+	  	  result += "\t" + htmlTag('meta', {property: 'og:image', href: images + "?" + moment.now()}) + '\n';
+	  });
   }
   else {
-  	images.forEach(function(path) {
-  	  result += og('og:image', path + "?" + moment.now(), false);
-  	});
-  }
+	  result += "\t" + htmlTag('meta', {property: 'og:image', href: theme.og_image_url + "?" + moment.now()}) + '\n';
+	}
 
   if (updated) {
     if ((moment.isMoment(updated) || moment.isDate(updated)) && !isNaN(updated.valueOf())) {
@@ -194,7 +191,10 @@ function metaMakerHelper(options) {
   }
 
   if (images.length) {
-    result += meta('twitter:image', images[0]+ "?" + moment.now(), false);
+    result += "\t" + htmlTag('meta', {name: 'twitter:image', content: images + "?" + moment.now()}) + '\n';
+  }
+  else {
+	  result += "\t" + htmlTag('meta', {name: 'twitter:image', content: theme.og_image_url + "?" + moment.now()}) + '\n';
   }
 
   if (theme.twitter_creator) {
