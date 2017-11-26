@@ -165,9 +165,7 @@ function metaMakerHelper(options) {
   });
   
   if (images.length) {
-	  images.forEach(function(path) {
-	  	  result += "\t" + htmlTag('meta', {property: 'og:image', href: images + "?" + moment.now()}) + '\n';
-	  });
+	  	  result += "\t" + htmlTag('meta', {property: 'og:image', href: images[0] + "?" + moment.now()}) + '\n';
   }
   else {
 	  result += "\t" + htmlTag('meta', {property: 'og:image', href: theme.og_image_url + "?" + moment.now()}) + '\n';
@@ -191,8 +189,9 @@ function metaMakerHelper(options) {
   }
 
   if (images.length) {
-    result += "\t" + htmlTag('meta', {name: 'twitter:image', content: images + "?" + moment.now()}) + '\n';
+    result += "\t" + htmlTag('meta', {name: 'twitter:image', content: images[0] + "?" + moment.now()}) + '\n';
   }
+  
   else {
 	  result += "\t" + htmlTag('meta', {name: 'twitter:image', content: theme.og_image_url + "?" + moment.now()}) + '\n';
   }
