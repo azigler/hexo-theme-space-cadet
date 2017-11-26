@@ -1,4 +1,4 @@
-# hexo-theme-emblem
+# hexo-theme-space-cadet
 
 A simple [Bootstrap 4](http://getbootstrap.com/) blog theme for [Hexo](http://zespia.tw/hexo/).
 
