@@ -137,9 +137,9 @@ function metaMakerHelper(options) {
   
   if (type == 'article'){
 	result += og('article:published_time', page.date.toISOString());
-	result += og('article:author', 'https://www.facebook.com/' + theme.fb_personal_id, false);
 	if (theme.fb_page_id){
 		result += og('article:publisher', 'https://www.facebook.com/' + theme.fb_page_id, false);
+		result += og('article:author', 'https://www.facebook.com/' + theme.fb_personal_id, false);
 	}
   }
   
