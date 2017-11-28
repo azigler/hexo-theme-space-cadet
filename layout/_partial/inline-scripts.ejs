@@ -1,19 +1,6 @@
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script><% if (config.disqus_shortname){ %>
-	<script>
-	  var disqus_shortname = '<%= config.disqus_shortname %>';
-	  <% if (page.permalink){ %>
-	  var disqus_url = '<%= page.permalink %>';
-	  <% } %>
-	  (function(){
-	    var dsq = document.createElement('script');
-	    dsq.type = 'text/javascript';
-	    dsq.async = true;
-	    dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
-	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	  })();
-	</script><% } %>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 	<% if (theme.magnific_popup){ %><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.1/magnific-popup.min.css" integrity="sha384-tWDFTs1UcUONxCAvg3Rc4ed3RZfQoK76FvLhoTcUaztUXoyQpJDHrV8g1faDHdnQ" crossorigin="anonymous">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.1/jquery.magnific-popup.min.js" integrity="sha384-N8lvjnNWlZm2w8TvUZCMcgeGlTzjqxYvfJgfAMo2OKZvS/jsANePW74CNyJg4KWP" crossorigin="anonymous"></script><% } %>
 	<%- js('js/script') %>
