@@ -71,7 +71,7 @@ function metaMakerHelper(options) {
   var description = options.description || page.description || page.excerpt || content || config.description;
   var keywords = page.keywords || (page.tags && page.tags.length ? page.tags : undefined) || config.keywords;
   var type = options.type || (this.is_post() ? 'article' : 'website');
-  var url = options.url || this.url;
+  var url = options.url || this.url.slice(0, -10);
   var siteName = options.site_name || config.title;
   var twitterCard = options.twitter_card || 'summary';
   var updated = options.updated !== false ? (options.updated || page.updated) : false;
@@ -104,7 +104,7 @@ function metaMakerHelper(options) {
 
   result += meta('author', config.author, false);
   
-  result += "\t" + htmlTag('link', {rel: 'canonical', href: config.url + "/" + page.path}) + '\n';
+  result += "\t" + htmlTag('link', {rel: 'canonical', href: url}) + '\n';
   if (description) {
     result += meta('description', description, false);
   }
@@ -165,10 +165,10 @@ function metaMakerHelper(options) {
   });
   
   if (images.length) {
-	  	  result += "\t" + htmlTag('meta', {property: 'og:image', href: images[0] + "?" + moment.now()}) + '\n';
+	  	  result += "\t" + htmlTag('meta', {property: 'og:image', content: images[0] + "?" + moment.now()}) + '\n';
   }
   else {
-	  result += "\t" + htmlTag('meta', {property: 'og:image', href: theme.og_image_url + "?" + moment.now()}) + '\n';
+	  result += "\t" + htmlTag('meta', {property: 'og:image', content: theme.og_image_url + "?" + moment.now()}) + '\n';
 	}
 
   if (updated) {
