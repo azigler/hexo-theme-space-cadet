@@ -137,6 +137,7 @@ time[itemprop="datePublished"]::before {
     font-family: FontAwesome;
     text-rendering: auto;
     font-size: 1rem;
+    margin-right: 0.25rem;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -146,7 +147,7 @@ time[itemprop="timePublished"]::before {
 	display: inline-block;
     font-family: FontAwesome;
     text-rendering: auto;
-    margin-left: 0.25rem;
+    margin-right: 0.25rem;
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
 }
@@ -157,31 +158,35 @@ time[itemprop="timePublished"]::before {
 	display: inline-block;
     font-family: FontAwesome;
     text-rendering: auto;
-    margin-left: 0.25rem;
+    margin-right: 0.15rem;
     font-size: 1rem;
     -webkit-font-smoothing: antialiased;
 }
 
 .article-header h1 a:hover {
   color: inherit;
-  text-decoration: overline;
 }
 
 .article-meta {
 	font-family: Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     font-size: 0.8rem;
     color: #757575;
+    cursor: default;
 }
 
 .article-datetime:hover time::before{
-	color: #aeaeae;
+	color: #8f6990;
 }
 
 .article-author:hover {
 	cursor: default;
 	&::before {
-		color: blue;
+		color: #8f6990;
 	}
+}
+
+.article-entry .caption {
+    color: #8f6990;
 }
 
 article-footer a{
@@ -218,7 +223,7 @@ article-footer a{
 
 
 a {
-	color: #424242;
+	color: #6d1588;;
 	&:hover {
 		color: rgb(255, 188, 243);
 		text-decoration: overline;
