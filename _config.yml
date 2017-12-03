@@ -1,7 +1,7 @@
 # Header
 navbar_brand:
 menu:
-  Index: index.html
+  Index: /
   Archive: archive/
 
 # RSS
