@@ -75,17 +75,20 @@
     $(this).addClass('table');
     $(this).wrap('<div class="table-responsive"></div>');
   });
-
-  //  Magnific Popup
-  if ($.magnificPopup){
-    $('.article-entry .image-link').magnificPopup({type: 'image'});
-    $('.article-gallery').each(function() {
-      $(this).magnificPopup({
-        delegate: '.image-link',
-        type: 'image',
-        gallery: { enabled: true }
-      });
-    });
+  
+  // Fancybox plugin
+  if ($.fancybox){
+    $('.article-entry .image-link').fancybox({buttons: ['close']});
+  
+	  // Facebook share button
+	  $('body').on('click', '[data-fancybox-fb]', function() {
+	  	window.open("https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(window.location.href)+"&t="+encodeURIComponent(document.title), '','left=0,top=0,width=600,height=300,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');
+	  });
+		
+	  // Twitter share button
+	  $('body').on('click', '[data-fancybox-tw]', function() {
+		window.open('http://twitter.com/share?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title), '', 'left=0,top=0,width=600,height=300,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');
+	  });
   }
 
 })(jQuery);

@@ -10,7 +10,7 @@ rss:
 # Content
 favicon: favicon.ico
 excerpt_link: Read More
-magnific_popup: true
+fancybox: true
 
 # Sidebar
 widgets:

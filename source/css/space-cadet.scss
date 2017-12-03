@@ -234,6 +234,16 @@ a:not([href]):not([tabindex]) {
 	color: #999;
 }
 
+/* SHARE BUTTONS */
+
+.fancybox-button--fb, .fancybox-button--tw {
+	background-color: #fff;
+	svg path {
+		color: #8f6990;
+		stroke-width: 1;
+	}
+}
+
 /* PAGINATION */
 
 .pagination {
