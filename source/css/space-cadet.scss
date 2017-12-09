@@ -175,13 +175,13 @@ time[itemprop="timePublished"]::before {
 }
 
 .article-datetime:hover time::before{
-	color: #8f6990;
+	color: #ffbcf3;
 }
 
 .article-author:hover {
 	cursor: default;
 	&::before {
-		color: #8f6990;
+		color: #ffbcf3;
 	}
 }
 
@@ -189,8 +189,10 @@ time[itemprop="timePublished"]::before {
     color: #8f6990;
 }
 
-article-footer a{
-	font: 1rem "Helvetica Neue", Helvetica, Arial, sans-serif;
+.article-more-link {
+	.btn {
+		width: 100%;
+	}
 }
 
 /* EXTRA */
