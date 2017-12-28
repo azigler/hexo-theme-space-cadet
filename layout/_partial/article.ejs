@@ -15,7 +15,7 @@
 		<% } %><% if (post.categories && post.categories.length){ %><%- partial('post/category') %>		
 				</div><% } else { %>		</div><% } %>
 				<div class="article-inner">
-					<div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+				<%- partial('post/gallery') %>	<div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
 						<meta itemprop="url" content="<%= theme.og_image_url %>">
 					</div>
 					<div class="article-entry" itemprop="articleBody">
