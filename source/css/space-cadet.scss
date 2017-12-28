@@ -103,10 +103,6 @@ body {
 		background-color: rgba(255, 255, 0, 0.54);
 	}
 	
-	.line:empty:after {
-	content: '\00000a';
-	}
-	
 	pre {
 	    background-color: #eae3ea;
 	    padding: 0.5rem;
@@ -121,8 +117,37 @@ body {
 		font-family: Georgia, "Times New Roman", Times, serif;
 	}
 	
+	.article-gallery-photos {
+		border-bottom: 0.3rem solid #eae3ea;
+	    border-radius: 1.2rem;
+	    margin-bottom: 1rem;
+	}
+	
 	img {
 		border-radius: 0.3rem;
+		margin-bottom: 0.5rem;
+	}
+	
+	.pullquote {
+		&.left {
+			border-right: 0.3rem solid #eae3ea;
+		    border-radius: 1.2rem;
+		    margin-right: 1rem;
+		}
+		&.right {
+			border-left: 0.3rem solid #eae3ea;
+		    border-radius: 1.2rem;
+		    padding-left: 1rem;
+		    margin-right: 1rem;
+		}
+	}
+	
+	blockquote {
+		footer {
+			    margin-left: 50%;
+				text-overflow: ellipsis;
+				overflow: hidden;
+		}
 	}
 }
 
