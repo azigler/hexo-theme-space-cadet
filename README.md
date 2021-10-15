@@ -4,8 +4,6 @@
 
 A modern, purple-accented [Bootstrap 4](http://getbootstrap.com/) blog theme for [Hexo](https://hexo.io).
 
-**[Demo Site](https://www.andrewzigler.com/blog)**
-
 Based on the [official Bootstrap 4 blog example template](https://getbootstrap.com/docs/4.0/examples/blog/).
 
 Uses [Fancybox](http://fancybox.net/) for images.
