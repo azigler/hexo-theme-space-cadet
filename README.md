@@ -1,6 +1,6 @@
 ![](https://repository-images.githubusercontent.com/110937442/2dc03880-2651-11ea-886a-62c39d4e9007)
 
-# hexo-theme-space-cadet
+# hexo-theme-space-cadet *\*\*(deprecated)\*\**
 
 A modern, purple-accented [Bootstrap 4](http://getbootstrap.com/) blog theme for [Hexo](https://hexo.io).
 
